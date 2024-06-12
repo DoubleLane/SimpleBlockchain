@@ -45,8 +45,7 @@ public static String applySha256(String input) {
   
 
 	public static boolean verifyECDSASig(PublicKey publicKey, String data, byte[] signature) {
-		try {
-//			
+		try {			
 			Signature ecdsaVerify = Signature.getInstance("SHA256withRSA");
 			ecdsaVerify.initVerify(publicKey);
 			ecdsaVerify.update(data.getBytes());
