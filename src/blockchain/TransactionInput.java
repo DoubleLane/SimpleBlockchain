@@ -1,10 +1,10 @@
-package blockchain;
+package SimpleBlockchain;
 
 public class TransactionInput {
-	public String transactionOutId;
-	public TransactionOutput UTXO;
+	public String transactionOutputId; //Reference to TransactionOutputs -> transactionId
+	public TransactionOutput UTXO; //Contains the Unspent transaction output
 	
-	public TransactionInput(String transactionOut) {
-		transactionOutId=transactionOut;
+	public TransactionInput(String transactionOutputId) {
+		this.transactionOutputId = transactionOutputId;
 	}
 }
